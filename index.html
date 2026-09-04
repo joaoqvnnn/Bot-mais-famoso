@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Larizinha Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <div class="login-container">
+    <div class="login-box">
+      <div class="logo">
+        <h1>💠 Larizinha Store</h1>
+        <p>Área do Cliente</p>
+      </div>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="telegram_id">Telegram ID</label>
+          <input type="text" id="telegram_id" placeholder="Ex: 6995978182" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Senha de Segurança</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-primary">Entrar</button>
+        <div class="error-message" id="errorMessage"></div>
+      </form>
+      <div class="links">
+        <a href="#" id="forgotPassword">Esqueci minha senha</a>
+        <span>|</span>
+        <a href="#" id="createAccount">Criar conta</a>
+      </div>
+      <p class="footer-text">Acesso protegido por senha de segurança</p>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
