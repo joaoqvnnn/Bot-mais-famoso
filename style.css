@@ -1,0 +1,151 @@
+/* ============================================
+   LARIZINHA STORE - ESTILO GLOBAL
+   ============================================ */
+
+:root {
+  --primary-color: #6c5ce7;
+  --primary-hover: #5a4bd1;
+  --secondary-color: #00b894;
+  --danger-color: #e74c3c;
+  --background-dark: #1e1e2f;
+  --background-light: #f5f6fa;
+  --card-dark: #2d2d44;
+  --card-light: #ffffff;
+  --text-dark: #333;
+  --text-light: #f1f1f1;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-light);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Tema escuro (pode ser ativado depois) */
+body.dark-theme {
+  background: var(--background-dark);
+  color: var(--text-light);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+.login-box {
+  background: var(--card-light);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 40px 30px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+body.dark-theme .login-box {
+  background: var(--card-dark);
+}
+
+.logo h1 {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.logo p {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border 0.3s;
+}
+
+body.dark-theme .form-group input {
+  background: #3a3a55;
+  border-color: #555;
+  color: #fff;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.error-message {
+  color: var(--danger-color);
+  margin-top: 10px;
+  min-height: 20px;
+  font-size: 0.9em;
+}
+
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.9em;
+}
+
+.links a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  margin-top: 30px;
+  font-size: 0.8em;
+  color: #999;
+}
