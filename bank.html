@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Conta Bancária - Larizinha Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .form-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    body.dark-theme .form-container {
+      background: #2d2d44;
+      color: #f1f1f1;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .form-group select,
+    .form-group input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      background: #fafafa;
+      color: #333;
+    }
+    body.dark-theme .form-group select,
+    body.dark-theme .form-group input {
+      background: #3a3a55;
+      border-color: #555;
+      color: #fff;
+    }
+    .btn-save {
+      width: 100%;
+      padding: 14px;
+      background: #00b894;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn-save:hover {
+      background: #00a381;
+    }
+    .error-message {
+      color: #e74c3c;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>🏦 Cadastro de Conta Bancária</h2>
+    <p>Preencha os dados para receber seus saques.</p>
+    <form id="bankForm">
+      <div class="form-group">
+        <label for="bankSelect">Banco</label>
+        <select id="bankSelect" required>
+          <option value="">Selecione o banco...</option>
+          <!-- Opções carregadas via JavaScript -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="agency">Agência</label>
+        <input type="text" id="agency" placeholder="Ex: 0001" required>
+      </div>
+      <div class="form-group">
+        <label for="account">Número da Conta</label>
+        <input type="text" id="account" placeholder="Ex: 12345-6" required>
+      </div>
+      <div class="form-group">
+        <label for="accountType">Tipo de Conta</label>
+        <select id="accountType">
+          <option value="checking">Conta Corrente</option>
+          <option value="savings">Conta Poupança</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="cpfCnpj">CPF ou CNPJ do titular</label>
+        <input type="text" id="cpfCnpj" placeholder="000.000.000-00" required>
+      </div>
+      <button type="submit" class="btn-save">Salvar Conta</button>
+      <div class="error-message" id="errorMessage"></div>
+    </form>
+    <p style="margin-top:20px; text-align:center;"><a href="dashboard.html">Voltar ao Painel</a></p>
+  </div>
+  <script src="banks.js"></script>
+  <script src="bank.js"></script>
+</body>
+</html>
